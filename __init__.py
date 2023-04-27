@@ -366,7 +366,7 @@ intents = discord.Intents.default()
 intents.members = True
 
 b = Bot(command_prefix = commands.when_mentioned_or("?gt."), case_insensitive=True, intents=intents)
-b_ipc = Server(bot, "0.0.0.0", 8765, "5aw3 bywvsaebrf 3a4w aw3")
+b_ipc = Server(bot, "0.0.0.0", 8765, config.API_TOKEN)
 
 @b_ipc.route()
 async def sort_users(request):
